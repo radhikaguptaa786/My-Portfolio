@@ -21,12 +21,15 @@ body{
     background-image: url(mainbackground.jpeg);
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .container{
     padding: 0 10%;
     overflow: hidden;
-  
 }
 nav {
     position: fixed;
@@ -81,15 +84,22 @@ nav ul li a:hover{
 .header-text
 {
     /* margin-top: 10%; */
-    font-size: 30px;
+    font-size: 5rem;
+  /* float: left; */
+}
+.pic{
+    /* float: right; */
+   margin-top: 70px;
+   margin-right: 200px;
+    border: 2px solid red;
+   border-radius: 50%;
+   padding: 10px;
 }
 .header-text h1{
-    
-    padding: 150px 100px 30px;
+    margin-left: 50px;
+    padding: 100px 0 0 100px;
     font-size: 50px;
     font-family: serif;
-   
-
 }
 .header-text h1 span{
     color: #d77d64;
@@ -116,12 +126,12 @@ nav ul li a:hover{
         content: "Programmer..";
     }
 }
-.header-text img
+/* .header-text img
 {
     width: 40%;
    margin: -5%;
    
-}
+} */
 /* ------about---- */
 #about{
     padding: 80px 0;
@@ -142,14 +152,11 @@ nav ul li a:hover{
 }
 .about-col-1
 {
-   
     flex-basis: 30%;
-
 }
 .about-col-1 img{
     width:100%;
     border-radius: 15px;
-    padding: auto;
 }
 .about-col-2{
     flex-basis:65%;
@@ -448,12 +455,22 @@ nav .fa-regular
 @media only screen and (max-width:600px){
     #header
     {
+        display: unset;
         background-image: url(mainbackground.jpeg);
     }
     .header-text
     {
         /* margin-top: 70%; */
+        margin-right: 0;
         font-size: 16px;
+    }
+    .pic{
+        margin: 15px 0 0 100px;
+        border: none;
+    }
+    .pic img{
+        height: 300px;
+        width: 300px;
     }
     .header-text h1{
         font-size: 30px;
@@ -507,6 +524,11 @@ nav ul .fa-regular
 .about-col-1{
     margin-bottom: 30px;
 }
+.about-col-1 img{
+    display: none;
+    height: 200px;
+    width: auto;
+}
 .about-col-2{
     font-size: 16px;
 }
@@ -527,3 +549,4 @@ nav ul .fa-regular
     margin-top: -40px ;
     display: block;
 }
+
